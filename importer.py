@@ -57,17 +57,22 @@ def main():
 
     """)
 
+    REPORT_FREQ = 500
+
     with open(filename, "r") as infile:
         storage = {}
-        for line in infile:
+        for count, line in enumerate(infile):
             line = line.strip()
             line = line.decode("UTF-8", "ignore")
             if line:
-                print line
                 name, value = line.split(" ", 1)
                 name = name.strip(':')
-                column = name.split("/")[1]
-                storage[column] = value
+                column = name.split("/")
+                if len(column) > 1:
+                    column = column[1]
+                    storage[column] = value
+                else:
+                    continue
             else:
                 product_id = storage["productId"]
                 user_id = storage["userId"]
@@ -82,6 +87,8 @@ def main():
                         ts, summary, text]
                 session.execute(ps, args)
                 storage = {}
+            if count % REPORT_FREQ == 0:
+                print "%d: %s" % (count, line)
 
 if __name__ == '__main__':
     main()
