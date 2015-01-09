@@ -35,7 +35,7 @@ def main():
     session = cluster.connect()
 
     keyspace = """
-    CREATE KEYSPACE capstone WITH replication = {
+    CREATE KEYSPACE IF NOT EXISTS capstone WITH replication = {
       'class': 'NetworkTopologyStrategy',
       'Analytics': '1',
       'Solr': '1',
