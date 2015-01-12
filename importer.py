@@ -18,6 +18,9 @@ review/text: I have bought several of the Vitality canned dog food products and 
 REVIEWS = """
 CREATE TABLE IF NOT EXISTS reviews(
   product_id varchar,
+  product_name VARCHAR STATIC,
+  product_description VARCHAR STATIC,
+  product_img_url VARCHAR STATIC,
   user_id varchar,
   profile_name varchar,
   helpfulness varchar,
