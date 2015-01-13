@@ -1,0 +1,13 @@
+<h1>{{ tier }}-Star Products</h1>
+<hr/>
+<ol>
+    {% for item in products %}
+        <ul>
+            <li><img src="{{ item.img_url }}"></li>
+            <li>{{ item.title }}</li>
+            <li>{{ item.score }}</li>
+        </ul>
+
+    {% endfor %}
+</ol>
+Stuff

@@ -2,12 +2,25 @@
 
 import traceback
 
-from flask import Flask, render_template
+from cassandra.cluster import Cluster
+from flask import Flask, g, render_template
+
+from calculate_reviews import calculate_tier
+from config import Config
+
+
 app = Flask(__name__)
 
+
 @app.route("/")
-def root():
-    return "Hello World!"
+@app.route("/scores/<score>")
+def products_by_score(score="5.0"):
+    tier = calculate_tier(float(score))
+    q = """SELECT score, asin, title, img_url FROM products_by_score
+              WHERE tier=%s LIMIT 10"""
+    results = g.session.execute(q, (tier,))
+    return render_template('products_by_score.html',
+                           tier=tier, products=results)
 
 @app.route('/hello/')
 @app.route('/hello/<name>')
@@ -18,6 +31,21 @@ def hello(name=None):
 def die():
     # It's German for 'The Bart, The'
     raise AttributeError("You asked me to die and I did it")
+
+@app.before_request
+def before_request():
+    g.config = Config()
+    cluster = Cluster(g.config.servers)
+    session = cluster.connect()
+    session.set_keyspace(g.config.keyspace)
+    g.session = session
+
+@app.teardown_request
+def teardown_request(exception):
+    session = getattr(g, 'session', None)
+    if session is not None:
+        session.cluster.shutdown()
+        session.shutdown()
 
 @app.errorhandler(500)
 def internal_error(exception):
