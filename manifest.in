@@ -1,4 +1,5 @@
 include importer.py
+include calculate_reviews.py
 include product_loader.py
 include product_backfill.py
 include capstone.wsgi

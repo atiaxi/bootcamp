@@ -21,8 +21,8 @@ CREATE TABLE IF NOT EXISTS products_by_score(
 ) WITH CLUSTERING ORDER BY (score DESC)
 """
 
-#MAX_REVIEWS = 999999999
-MAX_REVIEWS = 10
+MAX_REVIEWS = 999999999
+#MAX_REVIEWS = 10
 
 
 def calculate_tier(value, granularity=0.5):
@@ -69,6 +69,9 @@ def main():
         num_reviews = scores[asin]["num_reviews"]
         num_stars = scores[asin]["num_stars"]
         title = scores[asin]['title']
+        # If there's no information in here, don't put it on the frontpage
+        if not title:
+            continue
         img_url = scores[asin]['img_url']
         possible_stars = num_reviews * 5
         avg_reviews = (num_stars / float(possible_stars)) * 5
