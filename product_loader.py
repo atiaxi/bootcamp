@@ -71,6 +71,7 @@ def lookup(asin, insert_statement, update_statement, session):
         batch.add(update_statement, (title, description, img_url, asin))
         session.execute(batch)
         print "   Data inserted"
+        return True
     except AttributeError:
         print "  Bad XML; skipped"
 
@@ -112,6 +113,7 @@ def main():
 
     REPORT_FREQ = 500
     stored = set()
+    written = 0
 
     with open(filename, "r") as infile:
         for count, line in enumerate(infile):
@@ -123,10 +125,12 @@ def main():
                 column = name.split("/")
                 if len(column) > 1:
                     if column[1] == 'productId' and value not in stored:
-                        lookup(value, ps, update, session)
+                        if lookup(value, ps, update, session):
+                            written += 1
                         stored.add(value)
             if count % REPORT_FREQ == 0:
                 print "%d: %s" % (count, line)
+    print "Saw %d records, wrote %d" % (len(stored), written)
 
 if __name__ == '__main__':
     main()

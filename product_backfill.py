@@ -19,7 +19,7 @@ def main():
     session = cluster.connect()
     session.set_keyspace('capstone')
 
-    q = "SELECT asin, title, description, img_url FROM products"
+    q = "SELECT asin, title, description, img_url FROM products limit 999999999"
     result = session.execute(q)
 
     update = session.prepare("""
