@@ -118,7 +118,7 @@ def main():
     with open(filename, "r") as infile:
         for count, line in enumerate(infile):
             line = line.strip()
-            line = line.decode("UTF-8", "ignore")
+            line = line.decode("ISO-8859", "ignore")
             if line:
                 name, value = line.split(" ", 1)
                 name = name.strip(':')
