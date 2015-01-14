@@ -3,8 +3,10 @@
 <ol>
     {% for item in products %}
         <ul>
-            <li><img src="{{ item.img_url }}"></li>
-            <li>{{ item.title }}</li>
+            <li><img src="{{ item.small_img_url }}"></li>
+            <li>
+                <a href="/review/{{item.asin}}">{{ item.title }}</a>
+            </li>
             <li>{{ item.score }}</li>
         </ul>
 

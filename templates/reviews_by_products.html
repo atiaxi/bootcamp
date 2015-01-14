@@ -1,0 +1,27 @@
+<h1>{{ info.name }}</h1>
+<hr/>
+
+<img src="{{ info.img_url }}"/>
+<h2>Score: {{ info.avg_reviews }} stars!</h2>
+
+<blockquote>
+    {{ info.description }}
+</blockquote>
+
+<div>
+    {% for review in results %}
+    <div>
+        <div>"{{ review.summary }}" by {{review.profile_name}}</div>
+        <div>
+            {{ review.score }} stars
+        </div>
+        <div>
+            {{ review.helpfulness }} found this review helpful
+        </div>
+        <div>
+            {{ review.text }}
+        </div>
+    </div>
+    <hr/>
+    {% endfor %}
+</div>

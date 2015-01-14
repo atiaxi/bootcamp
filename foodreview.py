@@ -3,7 +3,7 @@
 import traceback
 
 from cassandra.cluster import Cluster
-from flask import Flask, g, render_template
+from flask import Flask, abort, g, render_template
 
 from calculate_reviews import calculate_tier
 from config import Config
@@ -22,10 +22,24 @@ def products_by_score(score="5.0"):
     return render_template('products_by_score.html',
                            tier=tier, products=results)
 
-@app.route('/hello/')
-@app.route('/hello/<name>')
-def hello(name=None):
-    return render_template('hello.html', name=name)
+@app.route("/review/<asin>")
+def reviews_by_products(asin):
+    # Data about this product in particular
+    q = """SELECT product_name, product_description,
+        product_img_url, avg_reviews
+        FROM reviews WHERE product_id=%s LIMIT 1"""
+    result = g.session.execute(q, (asin,))
+    if not result:
+        abort(404)
+    product_info = result
+
+    # And all the reviews
+    q = """SELECT profile_name, helpfulness, score, time, summary, text
+        FROM reviews WHERE product_id=%s"""
+    results = g.session.execute(q, (asin,))
+
+    return render_template('reviews_by_products.html',
+                           info=product_info, results=results)
 
 @app.route('/die/')
 def die():
