@@ -68,7 +68,21 @@
 
 
 {% block content %}{% endblock %}
-
+        {% if page is defined %}
+            <div class="row">
+                {% if page > 0 %}
+                    <div class="col-lg-4">
+                      <a href="{{page}}">&lt; Previous page</a>
+                    </div>
+                {% endif %}
+                <div class="col-lg-4">
+                    Page {{ page + 1 }}
+                </div>
+                <div class="col-lg-4">
+                    <a href="{{page+1}}">Next page &gt;</a>
+                </div>
+            </div>
+        {% endif %}
       <hr>
 
       <footer>

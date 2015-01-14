@@ -3,7 +3,7 @@
 import traceback
 
 from cassandra.cluster import Cluster
-from flask import Flask, abort, g, render_template
+from flask import Flask, abort, g, redirect, render_template
 
 from calculate_reviews import calculate_tier
 from config import Config
@@ -13,18 +13,37 @@ app = Flask(__name__)
 
 
 @app.route("/")
-@app.route("/scores/<score>")
-def products_by_score(score="5.0"):
+@app.route("/scores/<float:score>")
+def redirect_to_scores(score=5.0):
+    score = float(score)
+    return redirect("/scores/%f/0" % score)
+
+
+@app.route("/scores/<float:score>/<int:page>")
+def products_by_score(score=5.0, page=0):
     tier = calculate_tier(float(score))
+    page = int(page)
+
+    # This is an especially stupid way of paginating, but doing it the
+    # Right Way (TM) would require data model changes, and I've done
+    # way too many of those already.
+    limit = 10
+    max = (page + 1) * limit
+
+
     q = """SELECT score, asin, title, img_url FROM products_by_score
-              WHERE tier=%s LIMIT 10"""
-    results = g.session.execute(q, (tier,))
+              WHERE tier=%s LIMIT %s"""
+    results = g.session.execute(q, (tier,max, ))
+    results = list(results)[-limit:]
+    print "Page is %d" % page
     return render_template('products_by_score.html',
-                           tier=tier, products=results)
+                           tier=tier, products=results, page=page)
 
 
 @app.route("/review/<asin>")
 def reviews_by_products(asin):
+    limit = 10
+
     # Data about this product in particular
     q = """SELECT product_name, product_description,
         product_img_url, avg_reviews
@@ -36,8 +55,9 @@ def reviews_by_products(asin):
 
     # And all the reviews
     q = """SELECT profile_name, helpfulness, score, time, summary, text
-        FROM reviews WHERE product_id=%s"""
-    results = g.session.execute(q, (asin,))
+        FROM reviews WHERE product_id=%s LIMIT %s"""
+    results = g.session.execute(q, (asin,max,))
+
 
     return render_template('reviews_by_products.html',
                            info=product_info, results=results)
@@ -46,15 +66,18 @@ def reviews_by_products(asin):
 # Product search by title  - ATourkow
 @app.route("/products/search/")
 @app.route("/products/search/<search>")
-@app.route("/products/search/<search>/<page>")
+def products_search_redirect(search=""):
+    return redirect("/products/search/%s/0" % search)
+
+@app.route("/products/search/<search>/<int:page>")
 def products_search_by_title(search="", page=0):
     limit = 10
-    start = page * limit;
+    start = page * limit
     solr_query = '{"q":"title:%s*", "start":%s}'%(search, start)
     q = """SELECT * FROM products WHERE solr_query=%s LIMIT %s"""
     results = g.session.execute(q, (solr_query, limit))
     return render_template('products_search_by_title.html',
-                           search=search, products=results)
+                           search=search, products=results, page=page)
 
 
 @app.route('/die/')
