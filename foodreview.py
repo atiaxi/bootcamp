@@ -31,7 +31,7 @@ def reviews_by_products(asin):
     result = g.session.execute(q, (asin,))
     if not result:
         abort(404)
-    product_info = result
+    product_info = result[0]
 
     # And all the reviews
     q = """SELECT profile_name, helpfulness, score, time, summary, text

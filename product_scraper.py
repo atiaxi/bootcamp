@@ -64,7 +64,9 @@ def lookup(asin, outqueue):
         doc = soup.document
         item = doc.item
         title = item.title.text.encode("UTF-8")
+        title = title.replace('\n', ' ').replace('\r', '')
         description = item.description.text.encode("UTF-8")
+        description = description.replace('\n', ' ').replace('\r', '')
         links = doc.links
         img_url = links.imgurl.text
         small_img_url = links.images.smallimage.text

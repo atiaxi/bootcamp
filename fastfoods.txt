@@ -96,3 +96,202 @@ review/score: 5.0
 review/time: 1107820800
 review/summary: The Best Hot Sauce in the World
 review/text: I don't know if it's the cactus or the tequila or just the unique combination of ingredients, but the flavour of this hot sauce makes it one of a kind!  We picked up a bottle once on a trip we were on and brought it back home with us and were totally blown away!  When we realized that we simply couldn't find it anywhere in our city we were bummed.<br /><br />Now, because of the magic of the internet, we have a case of the sauce and are ecstatic because of it.<br /><br />If you love hot sauce..I mean really love hot sauce, but don't want a sauce that tastelessly burns your throat, grab a bottle of Tequila Picante Gourmet de Inclan.  Just realize that once you taste it, you will never want to use any other sauce.<br /><br />Thank you for the personal, incredible service!
+
+product/productId: B0009XLVG0
+review/userId: A2725IB4YY9JEB
+review/profileName: A Poeng "SparkyGoHome"
+review/helpfulness: 4/4
+review/score: 5.0
+review/time: 1282867200
+review/summary: My cats LOVE this "diet" food better than their regular food
+review/text: One of my boys needed to lose some weight and the other didn't.  I put this food on the floor for the chubby guy, and the protein-rich, no by-product food up higher where only my skinny boy can jump.  The higher food sits going stale.  They both really go for this food.  And my chubby boy has been losing about an ounce a week.
+
+product/productId: B0009XLVG0
+review/userId: A327PCT23YH90
+review/profileName: LT
+review/helpfulness: 1/1
+review/score: 1.0
+review/time: 1339545600
+review/summary: My Cats Are Not Fans of the New Food
+review/text: My cats have been happily eating Felidae Platinum for more than two years. I just got a new bag and the shape of the food is different. They tried the new food when I first put it in their bowls and now the bowls sit full and the kitties will not touch the food. I've noticed similar reviews related to formula changes in the past. Unfortunately, I now need to find a new food that my cats will eat.
+
+product/productId: B001GVISJM
+review/userId: A18ECVX2RJ7HUE
+review/profileName: willie "roadie"
+review/helpfulness: 2/2
+review/score: 4.0
+review/time: 1288915200
+review/summary: fresh and greasy!
+review/text: good flavor! these came securely packed... they were fresh and delicious! i love these Twizzlers!
+
+product/productId: B001GVISJM
+review/userId: A2MUGFV2TDQ47K
+review/profileName: Lynrie "Oh HELL no"
+review/helpfulness: 4/5
+review/score: 5.0
+review/time: 1268352000
+review/summary: Strawberry Twizzlers - Yummy
+review/text: The Strawberry Twizzlers are my guilty pleasure - yummy. Six pounds will be around for a while with my son and I.
+
+product/productId: B001GVISJM
+review/userId: A1CZX3CP8IKQIJ
+review/profileName: Brian A. Lee
+review/helpfulness: 4/5
+review/score: 5.0
+review/time: 1262044800
+review/summary: Lots of twizzlers, just what you expect.
+review/text: My daughter loves twizzlers and this shipment of six pounds really hit the spot. It's exactly what you would expect...six packages of strawberry twizzlers.
+
+product/productId: B001GVISJM
+review/userId: A3KLWF6WQ5BNYO
+review/profileName: Erica Neathery
+review/helpfulness: 0/0
+review/score: 2.0
+review/time: 1348099200
+review/summary: poor taste
+review/text: I love eating them and they are good for watching TV and looking at movies! It is not too sweet. I like to transfer them to a zip lock baggie so they stay fresh so I can take my time eating them.
+
+product/productId: B001GVISJM
+review/userId: AFKW14U97Z6QO
+review/profileName: Becca
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1345075200
+review/summary: Love it!
+review/text: I am very satisfied with my Twizzler purchase.  I shared these with others and we have all enjoyed them.  I will definitely be ordering more.
+
+product/productId: B001GVISJM
+review/userId: A2A9X58G2GTBLP
+review/profileName: Wolfee1
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1324598400
+review/summary: GREAT SWEET CANDY!
+review/text: Twizzlers, Strawberry my childhood favorite candy, made in Lancaster Pennsylvania by Y & S Candies, Inc. one of the oldest confectionery Firms in the United States, now a Subsidiary of the Hershey Company, the Company was established in 1845 as Young and Smylie, they also make Apple Licorice Twists, Green Color and Blue Raspberry Licorice Twists, I like them all<br /><br />I keep it in a dry cool place because is not recommended it to put it in the fridge. According to the Guinness Book of Records, the longest Licorice Twist ever made measured 1.200 Feet (370 M) and weighted 100 Pounds (45 Kg) and was made by Y & S Candies, Inc. This Record-Breaking Twist became a Guinness World Record on July 19, 1998. This Product is Kosher! Thank You
+
+product/productId: B001GVISJM
+review/userId: A3IV7CL2C13K2U
+review/profileName: Greg
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1318032000
+review/summary: Home delivered twizlers
+review/text: Candy was delivered very fast and was purchased at a reasonable price.  I was home bound and unable to get to a store so this was perfect for me.
+
+product/productId: B001GVISJM
+review/userId: A1WO0KGLPR5PV6
+review/profileName: mom2emma
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1313452800
+review/summary: Always fresh
+review/text: My husband is a Twizzlers addict.  We've bought these many times from Amazon because we're government employees living overseas and can't get them in the country we are assigned to.  They've always been fresh and tasty, packed well and arrive in a timely manner.
+
+product/productId: B001GVISJM
+review/userId: AZOF9E17RGZH8
+review/profileName: Tammy Anderson
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1308960000
+review/summary: TWIZZLERS
+review/text: I bought these for my husband who is currently overseas. He loves these, and apparently his staff likes them also.<br />There are generous amounts of Twizzlers in each 16-ounce bag, and this was well worth the price. <a href="http://www.amazon.com/gp/product/B001GVISJM">Twizzlers, Strawberry, 16-Ounce Bags (Pack of 6)</a>
+
+product/productId: B001GVISJM
+review/userId: ARYVQL4N737A1
+review/profileName: Charles Brown
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1304899200
+review/summary: Delicious product!
+review/text: I can remember buying this candy as a kid and the quality hasn't dropped in all these years. Still a superb product you won't be disappointed with.
+
+product/productId: B001GVISJM
+review/userId: AJ613OLZZUG7V
+review/profileName: Mare's
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1304467200
+review/summary: Twizzlers
+review/text: I love this candy.  After weight watchers I had to cut back but still have a craving for it.
+
+product/productId: B001GVISJM
+review/userId: A22P2J09NJ9HKE
+review/profileName: S. Cabanaugh "jilly pepper"
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1295481600
+review/summary: Please sell these in Mexico!!
+review/text: I have lived out of the US for over 7 yrs now, and I so miss my Twizzlers!!  When I go back to visit or someone visits me, I always stock up.  All I can say is YUM!<br />Sell these in Mexico and you will have a faithful buyer, more often than I'm able to buy them right now.
+
+product/productId: B001GVISJM
+review/userId: A3FONPR03H3PJS
+review/profileName: Deborah S. Linzer "Cat Lady"
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1288310400
+review/summary: Twizzlers - Strawberry
+review/text: Product received is as advertised.<br /><br /><a href="http://www.amazon.com/gp/product/B001GVISJM">Twizzlers, Strawberry, 16-Ounce Bags (Pack of 6)</a>
+
+product/productId: B001GVISJM
+review/userId: A3RXAU2N8KV45G
+review/profileName: lady21
+review/helpfulness: 0/1
+review/score: 1.0
+review/time: 1332633600
+review/summary: Nasty No flavor
+review/text: The candy is just red , No flavor . Just  plan and chewy .  I would never buy them again
+
+product/productId: B001GVISJM
+review/userId: AAAS38B98HMIK
+review/profileName: Heather Dube
+review/helpfulness: 0/1
+review/score: 4.0
+review/time: 1331856000
+review/summary: Great Bargain for the Price
+review/text: I was so glad Amazon carried these batteries.  I have a hard time finding them elsewhere because they are such a unique size.  I need them for my garage door opener.<br />Great deal for the price.
+
+product/productId: B00144C10S
+review/userId: A2F4LZVGFLD1OB
+review/profileName: DaisyH
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1338854400
+review/summary: YUMMY!
+review/text: I got this for my Mum who is not diabetic but needs to watch her sugar intake, and my father who simply chooses to limit unnecessary sugar intake - she's the one with the sweet tooth - they both LOVED these toffees, you would never guess that they're sugar-free and it's so great that you can eat them pretty much guilt free!  i was so impressed that i've ordered some for myself (w dark chocolate) to take to the office so i'll eat them instead of snacking on sugary sweets.<br />These are just EXCELLENT!
+
+product/productId: B0001PB9FY
+review/userId: A3HDKO7OW0QNK4
+review/profileName: Canadian Fan
+review/helpfulness: 1/1
+review/score: 5.0
+review/time: 1107820800
+review/summary: The Best Hot Sauce in the World
+review/text: I don't know if it's the cactus or the tequila or just the unique combination of ingredients, but the flavour of this hot sauce makes it one of a kind!  We picked up a bottle once on a trip we were on and brought it back home with us and were totally blown away!  When we realized that we simply couldn't find it anywhere in our city we were bummed.<br /><br />Now, because of the magic of the internet, we have a case of the sauce and are ecstatic because of it.<br /><br />If you love hot sauce..I mean really love hot sauce, but don't want a sauce that tastelessly burns your throat, grab a bottle of Tequila Picante Gourmet de Inclan.  Just realize that once you taste it, you will never want to use any other sauce.<br /><br />Thank you for the personal, incredible service!
+
+product/productId: B003F6UO7K
+review/userId: AFM0O9480F04W
+review/profileName: Sherril
+review/helpfulness: 0/0
+review/score: 5.0
+review/time: 1297641600
+review/summary: Great machine!
+review/text: I have never been a huge coffee fan. However, my mother purchased this little machine and talked me into trying the Latte Macciato. No Coffee Shop has a better one and I like most of the other products, too (as a usually non-coffee drinker!).<br />The little Dolche Guesto Machine is super easy to use and prepares a really good Coffee/Latte/Cappuccino/etc in less than a minute (if water is heated up). I would recommend the Dolce Gusto to anyone. Too good for the price and I'am getting one myself! :)
+
+product/productId: B003F6UO7K
+review/userId: A31OQO709M20Y7
+review/profileName: Molly V. Smith "staral"
+review/helpfulness: 0/1
+review/score: 5.0
+review/time: 1288310400
+review/summary: THIS IS MY TASTE...
+review/text: This offer is a great price and a great taste, thanks Amazon for selling this product.<br /><br />Staral
+
+product/productId: B001EO5QW8
+review/userId: AOVROBZ8BNTP7
+review/profileName: S. Potter
+review/helpfulness: 19/19
+review/score: 4.0
+review/time: 1163376000
+review/summary: Best of the Instant Oatmeals
+review/text: McCann's Instant Oatmeal is great if you must have your oatmeal but can only scrape together two or three minutes to prepare it. There is no escaping the fact, however, that even the best instant oatmeal is nowhere near as good as even a store brand of oatmeal requiring stovetop preparation.  Still, the McCann's is as good as it gets for instant oatmeal. It's even better than the organic, all-natural brands I have tried.  All the varieties in the McCann's variety pack taste good.  It can be prepared in the microwave or by adding boiling water so it is convenient in the extreme when time is an issue.<br /><br />McCann's use of actual cane sugar instead of high fructose corn syrup helped me decide to buy this product.  Real sugar tastes better and is not as harmful as the other stuff. One thing I do not like, though, is McCann's use of thickeners.  Oats plus water plus heat should make a creamy, tasty oatmeal without the need for guar gum. But this is a convenience product.  Maybe the guar gum is why, after sitting in the bowl a while, the instant McCann's becomes too thick and gluey.
+

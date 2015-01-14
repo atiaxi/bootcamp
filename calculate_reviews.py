@@ -48,7 +48,7 @@ def main():
     result = session.execute(q)
     for score, asin, title, img_url in report_count(result):
         scores[asin]["num_reviews"] += 1
-        scores[asin]["num_stars"] += score
+        scores[asin]["num_stars"] += score or 0
         scores[asin]["title"] = title
         scores[asin]["img_url"] = img_url
     print "----------------------------------------"
