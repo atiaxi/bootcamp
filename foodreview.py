@@ -22,6 +22,18 @@ def products_by_score(score="5.0"):
     return render_template('products_by_score.html',
                            tier=tier, products=results)
 
+# Product search by title  - ATourkow
+@app.route("/products/search/")
+@app.route("/products/search/<search>/<page>")
+def products_search_by_title(search="", page=0):
+    limit = 10
+    start = page * limit;
+    q = """SELECT asin, description, image_url, small_img_url, title FROM products
+              WHERE solr_query=' {"q":"title:%s*", "start":%s}' LIMIT %s"""
+    results = g.session.execute(q, (search, start, limit,))
+    return render_template('products_search_by_title.html',
+                           search=search, products=results)
+
 @app.route('/hello/')
 @app.route('/hello/<name>')
 def hello(name=None):
