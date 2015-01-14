@@ -24,13 +24,14 @@ def products_by_score(score="5.0"):
 
 # Product search by title  - ATourkow
 @app.route("/products/search/")
+@app.route("/products/search/<search>")
 @app.route("/products/search/<search>/<page>")
 def products_search_by_title(search="", page=0):
     limit = 10
     start = page * limit;
-    q = """SELECT asin, description, image_url, small_img_url, title FROM products
-              WHERE solr_query=' {"q":"title:%s*", "start":%s}' LIMIT %s"""
-    results = g.session.execute(q, (search, start, limit,))
+    solr_query = '{"q":"title:%s*", "start":%s}'%(search, start)
+    q = """SELECT * FROM products WHERE solr_query=%s LIMIT %s"""
+    results = g.session.execute(q, (solr_query, limit))
     return render_template('products_search_by_title.html',
                            search=search, products=results)
 
@@ -47,7 +48,7 @@ def die():
 @app.before_request
 def before_request():
     g.config = Config()
-    cluster = Cluster(g.config.servers)
+    cluster = Cluster(g.config.servers_solr)
     session = cluster.connect()
     session.set_keyspace(g.config.keyspace)
     g.session = session
