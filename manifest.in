@@ -1,9 +1,12 @@
-include importer.py
 include calculate_reviews.py
 include config.py
-include product_loader.py
+include importer.py
 include product_backfill.py
+include product_loader.py
+include product_scraper.py
+
 include capstone.wsgi
 include foodreview.py
+include product_import.cql
 
 recursive-include templates *.html
