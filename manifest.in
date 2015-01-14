@@ -10,3 +10,4 @@ include foodreview.py
 include product_import.cql
 
 recursive-include templates *.html
+recursive-include static *
