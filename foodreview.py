@@ -22,6 +22,7 @@ def products_by_score(score="5.0"):
     return render_template('products_by_score.html',
                            tier=tier, products=results)
 
+
 @app.route("/review/<asin>")
 def reviews_by_products(asin):
     # Data about this product in particular
@@ -41,6 +42,21 @@ def reviews_by_products(asin):
     return render_template('reviews_by_products.html',
                            info=product_info, results=results)
 
+
+# Product search by title  - ATourkow
+@app.route("/products/search/")
+@app.route("/products/search/<search>")
+@app.route("/products/search/<search>/<page>")
+def products_search_by_title(search="", page=0):
+    limit = 10
+    start = page * limit;
+    solr_query = '{"q":"title:%s*", "start":%s}'%(search, start)
+    q = """SELECT * FROM products WHERE solr_query=%s LIMIT %s"""
+    results = g.session.execute(q, (solr_query, limit))
+    return render_template('products_search_by_title.html',
+                           search=search, products=results)
+
+
 @app.route('/die/')
 def die():
     # It's German for 'The Bart, The'
@@ -49,7 +65,7 @@ def die():
 @app.before_request
 def before_request():
     g.config = Config()
-    cluster = Cluster(g.config.servers)
+    cluster = Cluster(g.config.servers_solr)
     session = cluster.connect()
     session.set_keyspace(g.config.keyspace)
     g.session = session
