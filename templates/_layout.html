@@ -50,7 +50,7 @@
 
         <script>
           function searchSubmit(elForm) {
-            console.log(document.getElementById('search-box').value); 
+            window.location.href = "/products/search/" + document.getElementById('search-box').value; 
             return false;
           }
         </script>
