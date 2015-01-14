@@ -1,13 +1,29 @@
-<h1>{{ search }}-Search Products</h1>
-<hr/>
-<ol>
-    {% for item in products %}
-        <ul>
-            <li><img src="{{ item.img_url }}"></li>
-            <li>{{ item.title }}</li>
-            <li>{{ item.description }}</li>
-        </ul>
+{% extends "_layout.html" %}
+{% block content %}
 
+{% if search %}
+<h1>Your search for {{ search }}</h1>
+<hr/>
+{% endif %}
+      <!-- Table -->
+      <table class="table">
+        <tbody>
+    {% for item in products %}
+        <tr>
+            <td><img src="{{ item.img_url }}" style="height: 200px;"></td>
+            <td>
+            	<h2>{{ item.title }}</h2>
+            	{{ item.description|safe }}
+            </td>
+        </tr>
+	{% else %}
+		<tr><td>No results were found</td></tr>
     {% endfor %}
+    	</tbody>
+    </table>
 </ol>
+
+{% endblock %}
+
+
 
