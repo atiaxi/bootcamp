@@ -7,10 +7,10 @@ from cassandra.cluster import Cluster
 
 REPORT_FREQ = 500
 
-def report_count(iterator):
+def report_count(iterator, report_freq=REPORT_FREQ):
     for count, row in enumerate(iterator):
         yield row
-        if count % REPORT_FREQ == 0:
+        if count % report_freq == 0:
             print "%d: %s" % (count, row)
 
 
