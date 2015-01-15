@@ -3,16 +3,16 @@
 
 {% if search %}
 <h1>Your search for {{ search }}</h1>
-<hr/>
+
 {% endif %}
       <!-- Table -->
       <table class="table">
         <tbody>
     {% for item in products %}
         <tr>
-            <td><img src="{{ item.img_url }}" style="height: 200px;"></td>
+            <td><img src="{{ item.small_img_url }}"></td>
             <td>
-            	<h2>{{ item.title }}</h2>
+            	<h2><a href="/review/{{ item.asin }}">{{ item.title }}</a></h2>
             	{{ item.description|safe }}
             </td>
         </tr>

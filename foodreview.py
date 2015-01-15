@@ -42,8 +42,6 @@ def products_by_score(score=5.0, page=0):
 
 @app.route("/review/<asin>")
 def reviews_by_products(asin):
-    limit = 10
-
     # Data about this product in particular
     q = """SELECT product_name, product_description,
         product_img_url, avg_reviews
@@ -55,8 +53,8 @@ def reviews_by_products(asin):
 
     # And all the reviews
     q = """SELECT profile_name, helpfulness, score, time, summary, text
-        FROM reviews WHERE product_id=%s LIMIT %s"""
-    results = g.session.execute(q, (asin,max,))
+        FROM reviews WHERE product_id=%s"""
+    results = g.session.execute(q, (asin,))
 
 
     return render_template('reviews_by_products.html',
