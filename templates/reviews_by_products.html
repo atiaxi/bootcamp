@@ -21,7 +21,7 @@
             {{ review.helpfulness }} found this review helpful
         </div>
         <div>
-            {{ review.text }}
+            {{ review.text|safe }}
         </div>
     </div>
     {% endfor %}
