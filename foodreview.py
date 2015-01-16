@@ -2,7 +2,10 @@
 
 import traceback
 
+from cassandra import ConsistencyLevel
 from cassandra.cluster import Cluster
+from cassandra.policies import DCAwareRoundRobinPolicy
+from cassandra.query import SimpleStatement
 from flask import Flask, abort, g, redirect, render_template
 
 from calculate_reviews import calculate_tier
@@ -72,8 +75,10 @@ def products_search_by_title(search="", page=0):
     limit = 10
     start = page * limit
     solr_query = '{"q":"title:%s*", "start":%s}'%(search, start)
-    q = """SELECT * FROM products WHERE solr_query=%s LIMIT %s"""
-    results = g.session.execute(q, (solr_query, limit))
+    query = SimpleStatement("""
+      SELECT * FROM products WHERE solr_query=%s LIMIT %s
+    """, consistency_level=ConsistencyLevel.ONE)
+    results = g.session.execute(query, (solr_query, limit))
     return render_template('products_search_by_title.html',
                            search=search, products=results, page=page)
 
@@ -86,7 +91,9 @@ def die():
 @app.before_request
 def before_request():
     g.config = Config()
-    cluster = Cluster(g.config.servers_solr)
+    policy = DCAwareRoundRobinPolicy()
+    cluster = Cluster(g.config.servers_solr,
+                      load_balancing_policy=policy)
     session = cluster.connect()
     session.set_keyspace(g.config.keyspace)
     g.session = session
