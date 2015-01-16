@@ -74,7 +74,8 @@ def products_search_redirect(search=""):
 def products_search_by_title(search="", page=0):
     limit = 10
     start = page * limit
-    solr_query = '{"q":"title:%s*", "start":%s}'%(search, start)
+    search_replaced = search.replace (" ", "+")
+    solr_query = '{"q":"title:%s*", "start":%s}'%(search_replaced, start)
     query = SimpleStatement("""
       SELECT * FROM products WHERE solr_query=%s LIMIT %s
     """, consistency_level=ConsistencyLevel.ONE)
